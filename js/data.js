@@ -9,7 +9,7 @@ function boxFun(element, flowDataLength, flowsData, reposData) {
   return `<div class="card border border-0" style="width: 17rem;">
     <img src="${element.avatar_url}" class="card-img-top border rounded-circle" >
     <div class="card-body border rounded-4 mt-2 text-center">
-      <h5 class="card-title">${element.login}</h5>
+      <a href="${element.html_url}" class="card-title fw-bold fs-4">${element.login}</a>
       <div class="flowers-box d-flex justify-content-evenly align-items-center">
         <p class="flowers-text">${flowDataLength.length} followers</p>
         <p class="flowers-texts">${flowsData.length} following</p>
@@ -69,7 +69,7 @@ async function getPosts() {
     let filt = posts.filter((item) => item.login === info);
 
     filt.map((item) => {
-      // console.log(item);
+      console.log(item);
       boxs.innerHTML += boxFun(item, flowData, flowsData, reposData);
     });
   } catch (err) {
