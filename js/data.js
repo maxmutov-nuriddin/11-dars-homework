@@ -7,7 +7,8 @@ const innerBox = document.querySelector('.inner-box');
 
 function boxFun(element, flowDataLength, flowsData, reposData) {
   return `<div class="card border border-0" style="width: 17rem;">
-    <img src="${element.avatar_url}" class="card-img-top border rounded-circle" >
+  <img src="${element.avatar_url}" class="card-img-top border rounded-circle" >
+  <span class="position-absolute end-0 mx-1 my-1 border rounded-5 px-2 py-1 bg-warning text-bg-secondary" style="bottom:32%; font-size:10px;">${element.id}</span>
     <div class="card-body border rounded-4 mt-2 text-center">
       <a href="${element.html_url}" class="card-title fw-bold fs-4">${element.login}</a>
       <div class="flowers-box d-flex justify-content-evenly align-items-center">
