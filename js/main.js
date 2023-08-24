@@ -4,6 +4,7 @@ const input = document.querySelector('.input');
 function boxFun(element) {
   return `<div class="card border border-0" style="width: 17rem;">
   <img src="${element.avatar_url}" class="card-img-top border rounded-circle" >
+  <span class="position-absolute end-0 mx-1 my-1 border rounded-5 px-2 py-1 bg-warning text-bg-secondary" style="bottom:27%; font-size:10px;">${element.id}</span>
   <div class="card-body border rounded-4 mt-2 text-center">
     <h5 class="card-title">${element.login}</h5>
     <a href="info.html?name=${element.login}" class="btn btn-primary">See akk</a>
